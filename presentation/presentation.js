@@ -26,7 +26,7 @@ Hatena.Blog.Presentation = {
           // classにpresentation-ignore-elementがついていたら弾く
           if (className && className.match('presentation-ignore-element')) { return; }
 
-          if ($elem.prop('tagName') === 'H1') {
+          if ($elem.prop('tagName') === 'H2') {
             // slideElementsが既に定義されていたらとりあえず挿入する
             if (slideElements) { Hatena.Blog.Presentation.slides.push(slideElements); }
             slideElements = $('<section></section>');
