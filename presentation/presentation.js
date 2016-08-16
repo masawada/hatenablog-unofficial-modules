@@ -19,9 +19,15 @@ Hatena.Blog.Presentation = {
         if (this.started) return;
         this.started = true;
 
-        // h3レベルの見出しを見つけてスライドにする(markdownモードだとh1とか使えるからうまくいかなそう)
-        $('article div.section > h3').parent().each(function () {
-            Hatena.Blog.Presentation.slides.push($(this));
+        var slideElements;
+        $('article div.section').children().each(function() {
+          var $elem = $(this);
+          if ($elem.prop('tagName') === 'H1') {
+            // slideElementsが既に定義されていたらとりあえず挿入する
+            if (slideElements) { Hatena.Blog.Presentation.slides.push(slideElements); }
+            slideElements = $('<section></section>');
+          };
+          slideElements.append($elem);
         });
 
         var self = this;
