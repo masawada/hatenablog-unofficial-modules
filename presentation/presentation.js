@@ -81,7 +81,7 @@ Hatena.Blog.Presentation = {
         });
 
         var $container = $('<div id="presentation-container"></div>');
-        $container.append('<link rel="stylesheet" type="text/css" href="https://hitode909.github.io/hatenablog-unofficial-modules/presentation/presentation.css"/>');
+        $container.append('<link rel="stylesheet" type="text/css" href="https://masawada.github.io/hatenablog-unofficial-modules/presentation/presentation.css"/>');
         $container.append('<div class="presentation-pager"><span id="presentation-time"></span> - <span class="current-page">0</span>/<span class="max-page">0</span><progress max="100" value="0" class="presentation-progress"></div>');
         $container.append('<div class="presentation-title">' + document.title + '</div>');
         $container.append('<div class="presentation-content entry-content"></div>');
