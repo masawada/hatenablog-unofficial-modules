@@ -22,8 +22,9 @@ Hatena.Blog.Presentation = {
         var slideElements;
         $('.entry-content').first().children().each(function() {
           var $elem = $(this);
+          var className = $elem.attr('class');
           // classにpresentation-ignore-elementがついていたら弾く
-          if ($elem.attr('class').match('presentation-ignore-element')) { return; }
+          if (className && className.match('presentation-ignore-element')) { return; }
 
           if ($elem.prop('tagName') === 'H1') {
             // slideElementsが既に定義されていたらとりあえず挿入する
