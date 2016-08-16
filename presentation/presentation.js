@@ -33,6 +33,8 @@ Hatena.Blog.Presentation = {
           };
           slideElements.append($elem);
         });
+        // 最後のスライドをここで挿入する
+        if (slideElements) { Hatena.Blog.Presentation.slides.push(slideElements); }
 
         var self = this;
         $(window).keyup(function (e) {
